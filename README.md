@@ -1,15 +1,4 @@
 # Capacitaci-n-Meta
 Códigos utilizados para la formación 
 
-# Hola Mundo
-
-void setup(){
-  pinMode(13, OUTPUT);
-}
-void loop(){
-  digitalWrite(13, HIGH);
-  delay(1000); // Wait for 1000 millisecond(s)
-  digitalWrite(13, LOW);
-  delay(1000); // Wait for 1000 millisecond(s)
-}
-
+A continuación te comparto todos los códigos necesarios para realizar las capacitaciones con los equipos de trabajo.
