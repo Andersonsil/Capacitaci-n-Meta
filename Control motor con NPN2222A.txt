@@ -1,0 +1,11 @@
+int motor = 3;
+
+void setup(){
+ pinMode(motor, OUTPUT);
+}
+void loop(){
+  analogWrite(motor, 250);
+  delay(3000);
+  analogWrite(motor,0);
+  delay(3000);
+}

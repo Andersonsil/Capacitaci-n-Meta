@@ -1,0 +1,43 @@
+#include <SoftwareSerial.h>
+
+char DATO = 0;      // variable para almacenar caracter recibido
+
+int LEDROJO = 13;    // LED rojo a pin digital numero 13
+
+ 
+
+
+
+void setup(){
+
+  Serial.begin(9600);    // comunicacion serie entre Arduino y el modulo a 9600 bps
+
+  pinMode(LEDROJO, OUTPUT); // pin 13 como salida
+
+
+
+}
+
+
+
+void loop(){
+
+if (Serial.available()){      // si hay informacion disponible desde modulo
+
+  DATO = Serial.read();   // almacena en DATO el caracter recibido desde modulo
+
+
+
+  if( DATO == '1' )       // si el caracter recibido es el numero 1
+
+  digitalWrite(LEDROJO, HIGH);
+
+ 
+
+  if ( DATO == '2' )   // si el caracter recibido es el numero 2
+
+  digitalWrite(LEDROJO, LOW);
+
+}
+
+}

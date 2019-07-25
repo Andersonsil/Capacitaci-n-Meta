@@ -1,0 +1,69 @@
+int rojo=8;
+
+int azul=9;
+
+int pulsador=0;
+
+int entrada=2;
+
+int tiempo=30;
+
+void setup(){
+
+  pinMode(rojo, OUTPUT);
+
+  pinMode(azul, OUTPUT);
+
+  pinMode(pulsador, INPUT);
+
+  pinMode(entrada, INPUT);
+
+}
+
+void loop(){
+
+  digitalWrite(rojo, HIGH);
+
+  delay(tiempo); // Wait for 1000 millisecond(s)
+
+  digitalWrite(rojo, LOW);
+
+  delay(tiempo); // Wait for 1000 millisecond(s)
+
+  digitalWrite(rojo, HIGH);
+
+  delay(tiempo); // Wait for 1000 millisecond(s)
+
+  digitalWrite(rojo, LOW);
+
+  delay(150); // Wait for 1000 millisecond(s)
+
+    digitalWrite(azul, HIGH);
+
+  delay(tiempo); // Wait for 1000 millisecond(s)
+
+  digitalWrite(azul, LOW);
+
+  delay(tiempo); // Wait for 1000 millisecond(s)
+
+  digitalWrite(azul, HIGH);
+
+  delay(tiempo); // Wait for 1000 millisecond(s)
+
+  digitalWrite(azul, LOW);
+
+  delay(150); // Wait for 1000 millisecond(s)
+
+  pulsador = digitalRead(entrada);
+
+  if(pulsador==HIGH){
+
+    tiempo=30;
+
+}else{
+
+    tiempo=500;
+
+}
+
+}
